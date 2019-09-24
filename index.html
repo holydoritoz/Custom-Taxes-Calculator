@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang='EN'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculadora|Provisión de Fondos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet" href="stylesBulma.css">
+    <link href="https://fonts.googleapis.com/css?family=Electrolize&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container has-text-centered">
+            <h1 class="title">Simulador de Provisiones de Fondo</h1>
+            <h2 class="subtitle">
+                A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+            </h2>
+        </div>
+    </section>
+
+    <div class="columns" id="form" action ="">
+        <div class="column is-4 has-text-centered">
+            <div class="select is-multiple">
+                <div class="container">
+                    <div class="field">
+                        <p class="control has-icons-left">
+                            <input class="input" type="text" placeholder="Fob"  id="montoFob" onchange="cif(this.value);" />
+                            <span class="icon is-small is-left"><i class="fas fa-dollar-sign"></i></span>
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <div class="container">
+                    <div class="field">
+                        <p class="control has-icons-left">
+                            <input class="input" type="text" id= "montoSeguro" placeholder="Seguro" onchange="cif(this.value);" />
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-shield-alt"></i>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <div class="container is-centered">
+                    <div class="field">
+                        <p class="control has-icons-left">
+                            <input class="input" type="text" placeholder="Flete" id="montoFlete" onchange="cif(this.value);" />
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-truck"></i>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="container">
+                    <div class="field">
+                        <h1>Monto CIF</h1>
+                        <p class="control has-icons-left">
+                            <span><output class="input" type="text" id="totalCif"></span>
+                            <span class="icon is-small is-left"><i class="fas fa-box-open"></i></span>
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <input class="button" type="reset" id="btn-limpiar">
+            </div>
+        </div>
+
+
+        <div class="column is-centered">
+            <div class="field has-text-centered">
+                <h1>Ad Valorem.</h1>
+                <div class="field">
+                   <span> <output class="input is-danger" type="text" id="adValorem"></span>
+                </div>
+            </div>
+
+            <div class="field has-text-centered">
+                <h1>I.V.A Aduanero.</h1>
+                <div class="control">
+                    <output class="input is-danger" type="text" placeholder="19% IVA Aduanero" id="ivaAduanero">
+                </div>
+            </div>
+
+            <div class="field has-text-centered">
+                <h1>Total T.G.R</h1>
+                <div class="control">
+                    <output class="input is-dark" type="text" placeholder="totalTGR" id="totalTGR"> 
+                </div>
+                <a href="https://www.tgr.cl" target="_blank"><img src="img/tgr.png" style="width: 150px;"></a>
+            </div>
+        </div>
+        <div class="column is-centered">
+        </div>
+    </div>
+
+    <section class="footer">
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is
+                    licensed
+                    <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed <a
+                        href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+                </p>
+            </div>
+        </footer>
+    </section>
+</body>
+
+</html>
